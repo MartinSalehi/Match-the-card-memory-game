@@ -1,5 +1,4 @@
 
-<<<<<<< Updated upstream
 h1 {
     font-size: 60px;
     position: relative;
@@ -36,7 +35,6 @@ ol {
 p {
     font-size: 50px;
 }
-=======
 h1 {font-size: 60px;}
 
 .headInstructions {font-size: 35px;color:black;}
@@ -58,4 +56,3 @@ h1 {font-size: 60px;}
 }
 
 .navBox {font-size: 25px;padding: 15px;margin: 5px;background-color:bisque;height: 50px;}
->>>>>>> Stashed changes
