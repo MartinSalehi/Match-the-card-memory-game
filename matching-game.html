@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matching Game!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <h1>Matching Game!</h1>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <img id="myImage1" onclick="changeImage1()" src="card.jpg">
+            </div>
+            <div class="col-sm">
+                <img id="myImage2" onclick="changeImage2()" src="card.jpg">
+            </div>
+            <div class="col-sm">
+                <img id="myImage3" onclick="changeImage3()" src="card.jpg">
+            </div>
+            <div class="col-sm">
+                <img id="myImage4" onclick="changeImage4()" src="card.jpg">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <img id="myImage5" onclick="changeImage5()" src="card.jpg">
+            </div>
+            <div class="col-sm">
+                <img id="myImage6" onclick="changeImage6()" src="card.jpg">
+            </div>
+            <div class="col-sm">
+                <img id="myImage7" onclick="changeImage7()" src="card.jpg">
+            </div>
+            <div class="col-sm">
+                <img id="myImage8" onclick="changeImage8()" src="card.jpg">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <img id="myImage9" onclick="changeImage9()" src="card.jpg">
+            </div>
+            <div class="col-sm">
+                <img id="myImage10" onclick="changeImage10()" src="card.jpg">
+            </div>
+            <div class="col-sm">
+                <img id="myImage11" onclick="changeImage11()" src="card.jpg">
+            </div>
+            <div class="col-sm">
+                <img id="myImage12" onclick="changeImage12()" src="card.jpg">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <img id="myImage13" onclick="changeImage13()" src="card.jpg">
+            </div>
+            <div class="col-sm">
+                <img id="myImage14" onclick="changeImage14()" src="card.jpg">
+            </div>
+            <div class="col-sm">
+                <img id="myImage15" onclick="changeImage15()" src="card.jpg">
+            </div>
+            <div class="col-sm">
+                <img id="myImage16" onclick="changeImage16()" src="card.jpg">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        const changeImage = ["changeImage1", "changeImage2", "changeImage3", "changeImage4", "changeImage5", "changeImage6", "changeImage7", "changeImage8", "changeImage9", "changeImage10", "changeImage11", "changeImage12", "changeImage13", "changeImage14", "changeImage15", "changeImage16",];
+        const myImage = ["myImage1", "myImage2", "myImage3", "myImage4", "myImage5", "myImage6", "myImage7", "myImage8", "myImage9", "myImage10", "myImage11", "myImage12", "myImage13", "myImage14", "myImage15", "myImage16"]
+        const Holder = []
+        var numberMatched = 0
+        var image1 = document.getElementById("myImage1");
+        var image2 = document.getElementById("myImage2");
+        var image3 = document.getElementById("myImage3");
+        function checkImages() {
+            if (Holder[0] === Holder[1]) {
+                numberMatched += 1
+            }
+            else {
+                if (Holder.includes(1)) {
+                    image1.src = card.jpg
+                    image9.src = card.jpg
+                }
+                if (Holder.includes(2)) {
+                    image2.src = card.jpg
+                    image10.src = card.jpg
+                }
+                if (Holder.includes(3)) {
+                    image3.src = card.jpg
+                    image11.src = card.jpg
+                }
+                if (Holder.includes(4)) {
+                    image4.src = card.jpg
+                    image12.src = card.jpg
+                }
+                if (Holder.includes(5)) {
+                    image5.src = card.jpg
+                    image13.src = card.jpg
+                }
+                if (Holder.includes(6)) {
+                    image6.src = card.jpg
+                    image14.src = card.jpg
+                }
+                if (Holder.includes(7)) {
+                    image7.src = card.jpg
+                    image15.src = card.jpg
+                }
+                if (Holder.includes(8)) {
+                    image8.src = card.jpg
+                    image16.src = card.jpg
+                }
+            }
+        }
+        function changeImage1() {
+            var image1 = document.getElementById("myImage1");
+            if (image1.src.match("card.jpg")) {
+                image1.src = "1.png";
+                Holder.push("1")
+                checkImages()
+            }
+        }
+        function changeImage2() {
+            var image2 = document.getElementById("myImage2");
+            if (image2.src.match("card.jpg")) {
+                image2.src = "2.png";
+                Holder.push("2")
+                checkImages()
+            }
+        }
+        function changeImage3() {
+            var image3 = document.getElementById("myImage3");
+            if (image3.src.match("card.jpg")) {
+                image3.src = "3.png";
+                Holder.push("3")
+                checkImages()
+            }
+        }
+        function changeImage4() {
+            var image4 = document.getElementById("myImage4");
+            if (image4.src.match("card.jpg")) {
+                image4.src = "4.png";
+                Holder.push("4")
+                checkImages()
+            }
+        }
+        function changeImage5() {
+            var image5 = document.getElementById("myImage5");
+            if (image5.src.match("card.jpg")) {
+                image5.src = "5.png";
+                Holder.push("5")
+                checkImages()
+            }
+        }
+        function changeImage6() {
+            var image6 = document.getElementById("myImage6");
+            if (image6.src.match("card.jpg")) {
+                image6.src = "6.png";
+                Holder.push("6")
+                checkImages()
+            }
+        }
+        function changeImage7() {
+            var image7 = document.getElementById("myImage7");
+            if (image7.src.match("card.jpg")) {
+                image7.src = "7.png";
+                Holder.push("7")
+                checkImages()
+            }
+        }
+        function changeImage8() {
+            var image8 = document.getElementById("myImage8");
+            if (image8.src.match("card.jpg")) {
+                image8.src = "8.png";
+                Holder.push("8")
+                checkImages()
+            }
+        }
+        function changeImage9() {
+            var image9 = document.getElementById("myImage9");
+            if (image9.src.match("card.jpg")) {
+                image9.src = "1.png";
+                Holder.push("1")
+                checkImages()
+            }
+        }
+        function changeImage10() {
+            var image10 = document.getElementById("myImage10");
+            if (image10.src.match("card.jpg")) {
+                image10.src = "2.png";
+                Holder.push("2")
+                checkImages()
+            }
+        }
+        function changeImage11() {
+            var image11 = document.getElementById("myImage11");
+            if (image11.src.match("card.jpg")) {
+                image11.src = "3.png";
+                Holder.push("3")
+                checkImages()
+            }
+        }
+        function changeImage12() {
+            var image12 = document.getElementById("myImage12");
+            if (image12.src.match("card.jpg")) {
+                image12.src = "4.png";
+                Holder.push("4")
+                checkImages()
+            }
+        }
+        function changeImage13() {
+            var image13 = document.getElementById("myImage13");
+            if (image13.src.match("card.jpg")) {
+                image13.src = "5.png";
+                Holder.push("5")
+                checkImages()
+            }
+        }
+        function changeImage14() {
+            var image14 = document.getElementById("myImage14");
+            if (image14.src.match("card.jpg")) {
+                image14.src = "6.png";
+                Holder.push("6")
+                checkImages()
+            }
+        }
+        function changeImage15() {
+            var image15 = document.getElementById("myImage15");
+            if (image15.src.match("card.jpg")) {
+                image15.src = "7.png";
+                Holder.push("7")
+                checkImages()
+            }
+        }
+        function changeImage16() {
+            var image16 = document.getElementById("myImage16");
+            if (image16.src.match("card.jpg")) {
+                image16.src = "8.png";
+                Holder.push("8")
+                checkImages()
+
+            }
+        }
+        // Array; imageNum = ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png"];
+    </script>
+</body>
+
+</html>
